@@ -1,0 +1,32 @@
+
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[margin=1.0in]{geometry}
+\begin{document}
+
+\title{Crypto 1.2}
+\author{Tommy Olney}
+\date{}
+
+
+2.\\
+Consider the crypto system below and compute H(K|C)\\
+$P=\{ a,b,c \}$ with $P_P(a)=1/3\ P_P(b)=1/6\ P_P(c)=1/2$\\
+$K = (k_1,k_2,k_3)$ with $P_K(k_1)=\frac{1}{2}\ P_K(k_2)=\frac{1}{4}\ P_K(k_3)=\frac{1}{4}$\\
+$C = \{1,2,3,4\}$\\
+$e_{k_1}(a)=1\ e_{k_1}(b)=2\ e_{k_1}(c)=2$\\
+$e_{k_2}(a)=2\ e_{k_2}(b)=3\ e_{k_2}(c)=1$\\
+$e_{k_3}(a)=3\ e_{k_3}(b)=4\ e_{k_3}(c)=4$\\
+
+Compute:\\
+$P_c(1) = \frac{7}{24}$\\
+$P_c(2) = \frac{5}{12}$\\
+$P_c(3) = \frac{1}{8}$\\
+$P_c(4) = \frac{1}{6}$\\
+Since $H(X) = - \sum\limits_{i=1}^{n}p_ilog_2p_i$, find H(p), H(k), and H(c) \\
+$H(K) = -(\frac{1}{2}log_2\frac{1}{2}+\frac{1}{4}log_2\frac{1}{4}+\frac{1}{4}log_2\frac{1}{4}) = 1.5$\\
+$H(P) = -(\frac{1}{3}log_2\frac{1}{3}+\frac{1}{6}log_2\frac{1}{6}+\frac{1}{2}log_2\frac{1}{2}) = 1.459$\\
+$H(C) = -(\frac{7}{24}log_2\frac{7}{24}+\frac{5}{12}log_2\frac{5}{12}+\frac{1}{8}log_2\frac{1}{8}+\frac{1}{6}log_2\frac{1}{6}) = 1.851$\\
+$H(K)+H(P)-H(C) = 1.5+1.459-1.851 = 1.108$\\
+
+\end{document}
